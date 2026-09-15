@@ -28,6 +28,7 @@ jobs:
         run: |
           mkdir -p android-rom && cd android-rom
           repo init -u https://github.com/LineageOS/android.git -b cm-14.1 --git-lfs
+          repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune -j$(nproc)
           mkdir -p .repo/local_manifests
           git clone https://github.com/daavvis/device_samsung_degaswifiue.git device/samsung/degaswifi
           source build/envsetup.sh
