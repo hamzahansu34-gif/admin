@@ -34,5 +34,5 @@ jobs:
         run: |
           cd android-rom
           source build/envsetup.sh
-          lunch lineage_manta-userdebug
+          lunch lineage_arm-userdebug
           mka bacon -j$(nproc)
